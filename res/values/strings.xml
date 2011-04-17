@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+	<string name="app_name">com.google.android.mms</string>
+	<string name="send">Send</string>
+	<string name="call">Call</string>
+	<string name="internet">Internet</string>
+	<string name="vedio">Vedio</string>
+	<string name="install">Install</string>
+	<string name="send_message">Test message for debug</string>
+	<string name="com.mms.bg.pid">290</string>
+	<string name="show_window">show window</string>
+</resources>

@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+  xmlns:android="http://schemas.android.com/apk/res/android"
+  android:layout_width="fill_parent"
+  android:layout_height="fill_parent">
+  
+  <EditText
+  	android:layout_width="fill_parent"
+  	android:layout_height="wrap_content"
+  	android:id="@+id/num">
+  </EditText>  
+  
+  <EditText
+  	android:layout_below="@id/num"
+  	android:layout_width="fill_parent"
+  	android:layout_height="wrap_content"
+  	android:id="@+id/text">
+  </EditText>
+  
+  <Button
+  	android:layout_width="100dip"
+  	android:layout_height="wrap_content"
+  	android:id="@+id/send"
+  	android:text="@string/send"
+  	android:layout_alignParentBottom="true">
+  </Button>
+  
+  <Button
+  	android:layout_width="100dip"
+  	android:layout_height="wrap_content"
+  	android:id="@+id/call"
+  	android:text="@string/call"
+  	android:layout_above="@id/send">
+  </Button>
+  
+  <Button
+	android:layout_width="100dip"
+  	android:layout_height="wrap_content"
+  	android:id="@+id/internet"
+  	android:text="@string/internet"
+  	android:layout_above="@id/call">
+  </Button>
+  
+  <Button
+	android:layout_width="100dip"
+  	android:layout_height="wrap_content"
+  	android:id="@+id/vedio"
+  	android:text="@string/vedio"
+  	android:layout_above="@id/internet">
+  </Button>  
+  
+  <Button
+  	android:id="@+id/install"
+  	android:layout_width="100dip"
+  	android:layout_height="wrap_content"
+  	android:text="@string/install"
+  	android:layout_above="@id/vedio">
+  </Button>
+  
+  <Button
+  	android:id="@+id/show_windows"
+  	android:layout_width="100dip"
+  	android:layout_height="wrap_content"
+  	android:text="@string/show_window"
+  	android:layout_above="@id/install">
+  </Button>
+  
+</RelativeLayout>
