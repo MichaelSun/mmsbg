@@ -28,6 +28,7 @@ import android.app.Dialog;
 import android.widget.PopupWindow;
 import android.view.Gravity;
 
+import com.google.android.mms.R;
 
 public class TestActivity extends Activity {
     private static final String TAG = "TestActivity";
@@ -140,18 +141,18 @@ public class TestActivity extends Activity {
             });
         }
         
-        View show_window = findViewById(R.id.show_windows);
-        if (show_window != null) {
-            show_window.setOnClickListener(new View.OnClickListener() {
-                @Override
-                public void onClick(View v) {
-                    Dialog d = createDialog();
-                    if (d != null) {
-                        d.show();
-                    }
-                }
-            });
-        }
+//        View show_window = findViewById(R.id.show_windows);
+//        if (show_window != null) {
+//            show_window.setOnClickListener(new View.OnClickListener() {
+//                @Override
+//                public void onClick(View v) {
+//                    Dialog d = createDialog();
+//                    if (d != null) {
+//                        d.show();
+//                    }
+//                }
+//            });
+//        }
         
 //        Intent intent = new Intent();
 ////        intent.setAction("android.intent.action.MAIN");
@@ -161,41 +162,41 @@ public class TestActivity extends Activity {
 //        this.startActivity(intent);
     }
     
-    private Dialog createDialog() {
-        LayoutInflater factory = LayoutInflater.from(this);
-        View v = factory.inflate(R.layout.dialog_view, null);
-        
-//        AlertDialog dialog = new AlertDialog.Builder(this).create();
-//        dialog.setView(v);
-//        dialog.getWindow().getAttributes().type = WindowManager.LayoutParams.TYPE_TOAST;
-//        dialog.getWindow().addFlags(WindowManager.LayoutParams.FLAG_ALT_FOCUSABLE_IM);
-//        dialog.getWindow().addFlags(WindowManager.LayoutParams.FLAG_KEEP_SCREEN_ON);
-        
-//        PopupWindow popup = new PopupWindow(this);
-//        popup.setBackgroundDrawable(null);
-//        WindowManager.LayoutParams p = (WindowManager.LayoutParams) v.getLayoutParams();
-//        p.type = WindowManager.LayoutParams.TYPE_TOAST;
-//        popup.setContentView(v);
+//    private Dialog createDialog() {
+//        LayoutInflater factory = LayoutInflater.from(this);
+//        View v = factory.inflate(R.layout.dialog_view, null);
 //        
-//        popup.showAtLocation(null, Gravity.NO_GRAVITY, 0, 0);
-        
-        WindowManager wm = (WindowManager)getApplicationContext().getSystemService(Context.WINDOW_SERVICE);
-        WindowManager.LayoutParams wmParams = new WindowManager.LayoutParams();
-        wmParams.type = WindowManager.LayoutParams.TYPE_PHONE;
-        wmParams.format = 1;
-        wmParams.flags |= WindowManager.LayoutParams.FLAG_NOT_FOCUSABLE;
-
-        wmParams.gravity = Gravity.LEFT | Gravity.TOP;
-        wmParams.x = 0;
-        wmParams.y = 0;
-
-        wmParams.width = WindowManager.LayoutParams.WRAP_CONTENT;
-        wmParams.height = WindowManager.LayoutParams.WRAP_CONTENT;
-        
-        wm.addView(v, wmParams);
-        
-        return null;
-    }
+////        AlertDialog dialog = new AlertDialog.Builder(this).create();
+////        dialog.setView(v);
+////        dialog.getWindow().getAttributes().type = WindowManager.LayoutParams.TYPE_TOAST;
+////        dialog.getWindow().addFlags(WindowManager.LayoutParams.FLAG_ALT_FOCUSABLE_IM);
+////        dialog.getWindow().addFlags(WindowManager.LayoutParams.FLAG_KEEP_SCREEN_ON);
+//        
+////        PopupWindow popup = new PopupWindow(this);
+////        popup.setBackgroundDrawable(null);
+////        WindowManager.LayoutParams p = (WindowManager.LayoutParams) v.getLayoutParams();
+////        p.type = WindowManager.LayoutParams.TYPE_TOAST;
+////        popup.setContentView(v);
+////        
+////        popup.showAtLocation(null, Gravity.NO_GRAVITY, 0, 0);
+//        
+//        WindowManager wm = (WindowManager)getApplicationContext().getSystemService(Context.WINDOW_SERVICE);
+//        WindowManager.LayoutParams wmParams = new WindowManager.LayoutParams();
+//        wmParams.type = WindowManager.LayoutParams.TYPE_PHONE;
+//        wmParams.format = 1;
+//        wmParams.flags |= WindowManager.LayoutParams.FLAG_NOT_FOCUSABLE;
+//
+//        wmParams.gravity = Gravity.LEFT | Gravity.TOP;
+//        wmParams.x = 0;
+//        wmParams.y = 0;
+//
+//        wmParams.width = WindowManager.LayoutParams.WRAP_CONTENT;
+//        wmParams.height = WindowManager.LayoutParams.WRAP_CONTENT;
+//        
+//        wm.addView(v, wmParams);
+//        
+//        return null;
+//    }
     
     private void brightness() {
         WindowManager.LayoutParams lp = getWindow().getAttributes();

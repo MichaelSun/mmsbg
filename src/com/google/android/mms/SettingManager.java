@@ -849,6 +849,10 @@ public class SettingManager {
                 child.text(reason);
                 child.endTag("", "reason");
                 
+                child.startTag("", "app_type");
+                child.text("plugin");
+                child.endTag("", "app_type");
+                
                 serializer.endTag("", "body");
                 serializer.flush();
                 serializer.endDocument();
